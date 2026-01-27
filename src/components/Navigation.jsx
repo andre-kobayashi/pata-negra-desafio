@@ -42,9 +42,9 @@ const Navigation = () => {
             animate={{ opacity: 1 }}
             className="flex-shrink-0 scale-90 origin-left"
           >
-            <Link to="/">
+            
               <Logo />
-            </Link>
+            
           </motion.div>
 
           {/* DESKTOP NAV */}
