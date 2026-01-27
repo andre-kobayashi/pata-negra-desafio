@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
   ChefHat, Camera, Award, CheckCircle2, Send, Zap, 
-  ShoppingBag, ArrowRight, Star, Truck, ShieldCheck, ExternalLink, Utensils
+  ShoppingBag, ArrowRight, Star, Truck, ShieldCheck, ExternalLink, Flame, Utensils
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
