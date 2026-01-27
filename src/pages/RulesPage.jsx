@@ -105,6 +105,9 @@ const RulesPage = () => {
               <p className="text-zinc-400 text-sm italic mb-4 leading-relaxed">
                 Nós incentivamos você a postar os bastidores e preparo no seu perfil!
               </p>
+              <p className="mt-4 text-[10px] text-zinc-500 italic font-medium">
+                *não é obrigatório.
+              </p>
               <div className="space-y-2">
                 <div className="bg-black/40 p-3 rounded-xl flex items-center gap-3 text-xs font-bold text-zinc-300">
                   <span className="text-green-500">✅</span> Marque @patanegradefumados

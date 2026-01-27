@@ -66,65 +66,74 @@ const HomePage = () => {
           </motion.div>
         </section>
 
-        {/* SEÇÃO DE VENDAS - "O KIT CAMPEÃO" */}
-       <section className="py-20 px-6 bg-zinc-900/30">
+{/* SEÇÃO DE VENDAS - "ESCOLHA SEU INGREDIENTE" */}
+<section className="py-20 px-6 bg-zinc-900/30">
   <div className="max-w-md mx-auto">
 
     <div className="text-center mb-10">
-      <h2 className="text-3xl font-black italic mb-2 uppercase tracking-tighter">
-        O Kit Campeão
+      <h2 className="text-3xl font-black italic mb-2 uppercase tracking-tighter leading-none text-white">
+        Defumados <br /><span className="text-copper font-black">Exclusivos</span>
       </h2>
-      <p className="text-zinc-500 text-sm italic underline underline-offset-4 decoration-copper/40">
-        O combo ideal para competir no Brasil no Prato.
+      <p className="text-zinc-500 text-sm italic font-medium">
+        Escolha seu favorito e comece a criar sua receita.
       </p>
     </div>
 
-    <div className="bg-gradient-to-br from-zinc-800/50 to-black p-8 rounded-[2.5rem] border border-zinc-800 shadow-2xl relative overflow-hidden">
+    <div className="bg-gradient-to-br from-zinc-800/50 to-black p-8 rounded-[2.5rem] border border-zinc-800 shadow-2xl relative overflow-hidden group">
+      
+      {/* BADGE DE PREÇO */}
+      <div className="absolute top-0 right-0 bg-copper text-white px-6 py-2 rounded-bl-3xl font-black italic text-sm shadow-xl">
+        A PARTIR DE ¥800
+      </div>
 
-      <div className="flex justify-between items-start mb-6">
-        <Utensils className="text-copper" size={32} />
-        <div className="text-right">
-          <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
-            A partir de
-          </p>
-          <p className="text-2xl font-black text-white italic leading-none">
-            ¥4.500
-          </p>
+      <div className="flex items-center gap-4 mb-8">
+        <div className="w-12 h-12 bg-copper/10 rounded-2xl flex items-center justify-center border border-copper/20">
+          <Flame className="text-copper animate-pulse" size={28} />
+        </div>
+        <div>
+          <h3 className="text-xl font-black uppercase italic leading-none text-white">Pata Negra</h3>
+          <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest mt-1">Sabor Artesanal Defumado</p>
         </div>
       </div>
 
-      <h3 className="text-xl font-black uppercase italic mb-4">
-        Kit Degustação Pata Negra
-      </h3>
+      <p className="text-zinc-400 text-sm font-medium italic mb-8 leading-relaxed">
+        Não importa se é uma <span className="text-white font-bold">Costelinha Defumada</span> suculenta, um <span className="text-white font-bold">Bacon Artesanal</span> curado ou nossas famosas <span className="text-white font-bold">Linguiças</span>. Cada detalhe faz a diferença na nota dos jurados.
+      </p>
 
-      <ul className="space-y-2 mb-8 text-zinc-400 text-sm font-medium italic">
-        <li className="flex items-center gap-2">
-          <CheckCircle2 size={14} className="text-copper" />
-          Linguiça Defumada Artesanal
-        </li>
-        <li className="flex items-center gap-2">
-          <CheckCircle2 size={14} className="text-copper" />
-          Bacon Premium Curado
-        </li>
-        <li className="flex items-center gap-2">
-          <CheckCircle2 size={14} className="text-copper" />
-          Costelinha Defumada na Lenha
-        </li>
-      </ul>
+      {/* LISTA DE OPÇÕES POPULARES */}
+      <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="bg-black/40 p-3 rounded-xl border border-zinc-800/50 text-[10px] font-black uppercase italic text-zinc-400 text-center">
+          🥓 Bacon Artesanal
+        </div>
+        <div className="bg-black/40 p-3 rounded-xl border border-zinc-800/50 text-[10px] font-black uppercase italic text-zinc-400 text-center">
+          🍖 Costelinha
+        </div>
+        <div className="bg-black/40 p-3 rounded-xl border border-zinc-800/50 text-[10px] font-black uppercase italic text-zinc-400 text-center">
+          🌭 Linguiças
+        </div>
+        <div className="bg-black/40 p-3 rounded-xl border border-zinc-800/50 text-[10px] font-black uppercase italic text-zinc-400 text-center">
+          🥩 Porchetta
+        </div>
+      </div>
 
-      <p className="text-xs text-zinc-500 italic mb-6">
-        * Você pode participar com apenas 1 produto Pata Negra.  
-        Este kit é a opção mais completa para criar receitas competitivas.
+      <p className="text-[10px] text-zinc-600 italic mb-8 text-center font-bold uppercase tracking-tighter leading-tight">
+        * Você só precisa de <span className="text-copper">1 produto</span> para participar do desafio.
       </p>
 
       <a
         href="https://patanegradefumados.com/pagina-defumados"
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center gap-2 bg-white text-black w-full py-5 rounded-2xl font-black uppercase text-sm tracking-tighter hover:bg-copper hover:text-white transition-all shadow-xl"
+        className="flex items-center justify-center gap-3 bg-white text-black w-full py-5 rounded-2xl font-black uppercase text-base tracking-tighter hover:bg-copper hover:text-white transition-all shadow-glow active:scale-95"
       >
-        Garantir meu Kit <ArrowRight size={18} />
+        ESCOLHER MEU PRODUTO <ArrowRight size={20} />
       </a>
+    </div>
+    
+    <div className="mt-8 flex items-center justify-center gap-6 opacity-40">
+        <Truck size={20} />
+        <ShieldCheck size={20} />
+        <ShoppingBag size={20} />
     </div>
   </div>
 </section>
