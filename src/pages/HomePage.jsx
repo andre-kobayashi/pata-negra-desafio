@@ -52,7 +52,7 @@ const HomePage = () => {
             </p>
 
             <div className="space-y-3 mb-10">
-              <Link to="/participacao" className="block">
+                  <Link to="/participar" className="block"> 
                 <Button className="w-full bg-copper hover:bg-copper/90 text-white py-8 text-2xl font-black rounded-2xl shadow-[0_10px_40px_rgba(184,115,51,0.4)] active:scale-95 transition-all">
                   QUERO PARTICIPAR
                 </Button>
@@ -67,62 +67,67 @@ const HomePage = () => {
         </section>
 
         {/* SEÇÃO DE VENDAS - "O KIT CAMPEÃO" */}
-        <section className="py-20 px-6 bg-zinc-900/30">
-          <div className="max-w-md mx-auto">
-             <div className="text-center mb-10">
-                <h2 className="text-3xl font-black italic mb-2 uppercase tracking-tighter">O KIT CAMPEÃO</h2>
-                <p className="text-zinc-500 text-sm italic underline underline-offset-4 decoration-copper/40">
-                    O ingrediente secreto para vencer o desafio.
-                </p>
-             </div>
+       <section className="py-20 px-6 bg-zinc-900/30">
+  <div className="max-w-md mx-auto">
 
-            <div className="bg-gradient-to-br from-zinc-800/50 to-black p-8 rounded-[2.5rem] border border-zinc-800 shadow-2xl relative overflow-hidden">
-              <div className="flex justify-between items-start mb-6">
-                <Utensils className="text-copper" size={32} />
-                <div className="text-right">
-                    <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">A partir de</p>
-                    <p className="text-2xl font-black text-white italic leading-none">¥4.500</p>
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-black uppercase italic mb-4">Kit Degustação Pata Negra</h3>
-              <ul className="space-y-2 mb-8 text-zinc-400 text-sm font-medium italic">
-                <li className="flex items-center gap-2 italic"><CheckCircle2 size={14} className="text-copper" /> Linguiça Defumada Artesanal</li>
-                <li className="flex items-center gap-2 italic"><CheckCircle2 size={14} className="text-copper" /> Bacon Premium Curado</li>
-                <li className="flex items-center gap-2 italic"><CheckCircle2 size={14} className="text-copper" /> Costelinha Defumada na Lenha</li>
-              </ul>
-              
-              <a 
-                href="https://patanegradefumados.com/collections/todos-os-produtos" 
-                target="_blank" 
-                rel="noreferrer"
-                className="flex items-center justify-center gap-2 bg-white text-black w-full py-5 rounded-2xl font-black uppercase text-sm tracking-tighter hover:bg-copper hover:text-white transition-all shadow-xl"
-              >
-                GARANTIR MEU KIT <ArrowRight size={18} />
-              </a>
-            </div>
-          </div>
-        </section>
+    <div className="text-center mb-10">
+      <h2 className="text-3xl font-black italic mb-2 uppercase tracking-tighter">
+        O Kit Campeão
+      </h2>
+      <p className="text-zinc-500 text-sm italic underline underline-offset-4 decoration-copper/40">
+        O combo ideal para competir no Brasil no Prato.
+      </p>
+    </div>
 
-        {/* REGRAS RÁPIDAS */}
-        <section className="py-16 px-6 bg-[#0a0a0a]">
-          <div className="max-w-md mx-auto">
-            <h2 className="text-xl font-bold mb-8 text-center italic text-gray-500 uppercase tracking-[0.2em]">Regras do Desafio</h2>
-            <div className="grid grid-cols-1 gap-4">
-              {[
-                "Válido para todo o Japão via Takkyubin",
-                "Privacidade total (seu nome não aparece)",
-                "A votação acontece no Instagram Stories",
-                "O prato deve conter 1 item Pata Negra"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-zinc-900/30 p-4 rounded-xl border border-zinc-800">
-                  <CheckCircle2 size={18} className="text-copper" />
-                  <span className="text-xs font-bold text-gray-300 italic uppercase tracking-tighter">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    <div className="bg-gradient-to-br from-zinc-800/50 to-black p-8 rounded-[2.5rem] border border-zinc-800 shadow-2xl relative overflow-hidden">
+
+      <div className="flex justify-between items-start mb-6">
+        <Utensils className="text-copper" size={32} />
+        <div className="text-right">
+          <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+            A partir de
+          </p>
+          <p className="text-2xl font-black text-white italic leading-none">
+            ¥4.500
+          </p>
+        </div>
+      </div>
+
+      <h3 className="text-xl font-black uppercase italic mb-4">
+        Kit Degustação Pata Negra
+      </h3>
+
+      <ul className="space-y-2 mb-8 text-zinc-400 text-sm font-medium italic">
+        <li className="flex items-center gap-2">
+          <CheckCircle2 size={14} className="text-copper" />
+          Linguiça Defumada Artesanal
+        </li>
+        <li className="flex items-center gap-2">
+          <CheckCircle2 size={14} className="text-copper" />
+          Bacon Premium Curado
+        </li>
+        <li className="flex items-center gap-2">
+          <CheckCircle2 size={14} className="text-copper" />
+          Costelinha Defumada na Lenha
+        </li>
+      </ul>
+
+      <p className="text-xs text-zinc-500 italic mb-6">
+        * Você pode participar com apenas 1 produto Pata Negra.  
+        Este kit é a opção mais completa para criar receitas competitivas.
+      </p>
+
+      <a
+        href="https://patanegradefumados.com/pagina-defumados"
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center justify-center gap-2 bg-white text-black w-full py-5 rounded-2xl font-black uppercase text-sm tracking-tighter hover:bg-copper hover:text-white transition-all shadow-xl"
+      >
+        Garantir meu Kit <ArrowRight size={18} />
+      </a>
+    </div>
+  </div>
+</section>
 
         {/* CARDS DE PRÊMIOS */}
         <section className="py-16 px-4 bg-zinc-900/50 border-y border-zinc-800">
@@ -149,9 +154,9 @@ const HomePage = () => {
             <h2 className="text-5xl font-black mb-6 italic leading-none uppercase tracking-tighter">Bora <br />Cozinhar?</h2>
             <p className="text-gray-400 mb-10 font-medium text-lg leading-tight">O Japão inteiro vai votar no seu prato. <br />Garanta seu ingrediente e participe.</p>
             <div className="space-y-4">
-              <Link to="/participacao">
+              <Link to="/participar">       
                 <Button className="w-full bg-white text-black py-8 text-2xl font-black rounded-2xl shadow-2xl transition-transform active:scale-95">
-                  ENVIAR RECEITA <Send size={24} className="ml-2" />
+                  QUERO PARTICIPAR <Send size={24} className="ml-2" />    
                 </Button>
               </Link>
               <a href="https://patanegradefumados.com" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 text-copper font-black italic uppercase text-xs tracking-[0.2em] py-4">

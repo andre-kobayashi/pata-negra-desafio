@@ -10,6 +10,7 @@ import VotingPage from "@/pages/VotingPage";
 import AdminLogin from "@/pages/AdminLogin";
 import AdminDashboard from "@/pages/AdminDashboard";
 import ProtectedRoute from "@/components/ProtectedRoute";
+import RulesPage from '@/pages/RulesPage';
 
 function App() {
   return (
@@ -32,11 +33,14 @@ function App() {
           <Routes>
             {/* Público */}
             <Route path="/" element={<HomePage />} />
-            <Route path="/participacao" element={<ParticipationForm />} />
+            <Route path="/participar" element={<ParticipationForm />} />
             <Route path="/votacao" element={<VotingPage />} />
+            <Route path="/regras" element={<RulesPage />} />
+
+
 
             {/* Redirects */}
-            <Route path="/participate" element={<Navigate to="/participacao" replace />} />
+            <Route path="/participar" element={<Navigate to="/participar" replace />} />
             <Route path="/voting" element={<Navigate to="/votacao" replace />} />
 
             {/* Admin */}
