@@ -42,7 +42,6 @@ const Navigation = () => {
             animate={{ opacity: 1 }}
             className="flex-shrink-0 scale-90 origin-left"
           >
-            
               <Logo />
             
           </motion.div>

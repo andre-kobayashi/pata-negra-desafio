@@ -1,14 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  # Arquivos e pastas reais passam direto
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # SPA fallback (React Router)
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# Segurança básica
-Options -Indexes
+<IfModule mod_headers.c>
+  Header unset X-Powered-By
+
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</IfModule>
