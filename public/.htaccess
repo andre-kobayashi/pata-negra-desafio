@@ -1,18 +1,22 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # NÃO reescrever arquivos reais
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # IGNORAR assets do Vite explicitamente
+  RewriteRule ^assets/ - [L]
+  RewriteRule ^favicon - [L]
+  RewriteRule ^apple-touch-icon - [L]
+  RewriteRule ^site\.webmanifest - [L]
+  RewriteRule ^robots\.txt - [L]
 
-  # SPA fallback (somente rotas)
+  # SPA fallback
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>
-  # Cache forte para assets do Vite
   <FilesMatch "\.(js|css|png|jpg|jpeg|svg|webp|ico|woff2?)$">
+    Header set Content-Type "application/octet-stream"
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
