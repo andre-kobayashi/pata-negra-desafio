@@ -1,17 +1,22 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # NÃO reescrever arquivos reais
+  # NÃO reescrever arquivos e pastas reais
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # SPA fallback (React Router)
-  RewriteRule ^ index.html [L]
+  # SPA fallback
+  RewriteRule . /index.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>
+  # Tipos corretos (força MIME)
+  AddType text/css .css
+  AddType application/javascript .js
+
+  # Cache (sem immutable por enquanto)
   <FilesMatch "\.(js|css|png|jpg|jpeg|svg|webp|ico|woff2?)$">
-    Header set Cache-Control "no-cache, must-revalidate"
+    Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 </IfModule>
