@@ -165,32 +165,32 @@ const ParticipationForm = () => {
             </section>
 
             {/* PASSO 2: FOTOS */}
-            <section className="bg-zinc-900/40 p-6 rounded-2xl border border-zinc-800 relative">
-               <div className="absolute -top-3 left-6 bg-copper px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest text-black">
-                Passo 02
-              </div>
-              <h2 className="text-lg font-bold mb-6 flex items-center gap-2 italic">
-                <Camera size={18} className="text-copper" /> FOTOS DO DESAFIO
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-black/40 p-4 rounded-xl border border-dashed border-zinc-700">
-                   <ImageUpload
-                    label="1. Foto dos Ingredientes"
-                    description="Mostre o produto Pata Negra na foto."
-                    onChange={(file) => handleChange("photo1", file)}
-                    error={errors.photo1}
-                  />
-                </div>
-                <div className="bg-black/40 p-4 rounded-xl border border-dashed border-zinc-700">
-                  <ImageUpload
-                    label="2. Foto do Prato Pronto"
-                    description="Capriche no visual para ganhar votos!"
-                    onChange={(file) => handleChange("photo2", file)}
-                    error={errors.photo2}
-                  />
-                </div>
-              </div>
-            </section>
+            <section className="space-y-4">
+  <h2 className="text-copper font-bold flex items-center gap-2 italic">
+    <Camera size={18} className="text-copper" /> FOTOS DO DESAFIO
+  </h2>
+  <div className="space-y-6">
+    <div className="bg-black/40 p-4 rounded-xl border border-dashed border-zinc-700">
+       <ImageUpload
+        label="1. Foto dos Ingredientes"
+        description="Mostre o produto Pata Negra na foto."
+        value={formData.photo1} // ADICIONE ISSO
+        onChange={(file) => handleChange("photo1", file)}
+        error={errors.photo1}
+      />
+    </div>
+    <div className="bg-black/40 p-4 rounded-xl border border-dashed border-zinc-700">
+      <ImageUpload
+        label="2. Foto do Prato Pronto"
+        description="Capriche no visual para ganhar votos!"
+        value={formData.photo2} // ADICIONE ISSO
+        onChange={(file) => handleChange("photo2", file)}
+        error={errors.photo2}
+      />
+    </div>
+  </div>
+</section>
+
 
             {/* PASSO 3: RECEITA */}
             <section className="bg-zinc-900/40 p-6 rounded-2xl border border-zinc-800 relative">
