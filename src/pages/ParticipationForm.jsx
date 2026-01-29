@@ -70,7 +70,7 @@ const ParticipationForm = () => {
 
     setLoading(true);
     try {
-      const id = crypto.randomUUID();
+      const id = window.crypto?.randomUUID?.() || Math.random().toString(36).substring(2);
       const photo1Url = await uploadImage(formData.photo1, `${id}/ingredientes.jpg`);
       const photo2Url = await uploadImage(formData.photo2, `${id}/prato.jpg`);
 
