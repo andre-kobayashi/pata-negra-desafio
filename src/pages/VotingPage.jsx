@@ -20,7 +20,8 @@ const VotingPage = () => {
       const { data, error } = await supabase
         .from("participants") 
         .select("id, nome, cidade, instagram_votes, status, foto_prato_url")
-        .eq("status", "Validado")
+        // ALTERAÇÃO AQUI: Usamos o filtro .in para aceitar múltiplos status
+        .in("status", ["Validado", "Finalista", "Vencedor"])
         .order('instagram_votes', { ascending: false });
 
       if (error) throw error;
@@ -31,7 +32,7 @@ const VotingPage = () => {
       setLoading(false);
     }
   };
-
+  
   return (
     <>
       <Helmet>
